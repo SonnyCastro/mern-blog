@@ -4,11 +4,13 @@ const router = express.Router();
 const Article = require("./article.model");
 
 router.post("/", (request, response) => {
+  console.log(request.body);
   Article.create(request.body, (error, article) => {
     if (error) {
       console.log(`Error creating Article, ${new Date()}: ${error}`);
       response.status(400).json(error);
     } else {
+      console.log(article);
       response.status(201).json(article);
     }
   });

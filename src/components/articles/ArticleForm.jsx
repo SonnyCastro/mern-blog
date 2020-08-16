@@ -41,7 +41,7 @@ const ArticleForm = ({ history }) => {
           rows="5"
           placeholder="Text for your article..."
           required={true}
-          onChange={(e) => setValues({ ...values, title: e.target.value })}
+          onChange={(e) => setValues({ ...values, text: e.target.value })}
         />
       </Form.Group>
 
